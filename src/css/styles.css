@@ -31,7 +31,7 @@ img {
   display: flex;
 }
 
-.country-info {
+.list-info {
   list-style: none;
 
 }
@@ -42,6 +42,10 @@ img {
   font-weight: 700;
 }
 
+.list-item{
+  list-style: none;
+  font-weight: 700;
+}
 
 
 
