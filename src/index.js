@@ -13,6 +13,9 @@ searchInput.addEventListener("input", debounce(onSearch, DEBOUNCE_DELAY));
 
 function onSearch(e) {
   e.preventDefault();
+  clearMarkupConteiner();
+  clearCardOfCountry();
+
   name = e.target.value.trim();
   
   if (name === ''){return};
@@ -25,8 +28,7 @@ function onSearch(e) {
 function renderCountryList (countries) {
 
   if(countries.length === 1){
-    clearMarkupConteiner();
-
+    
     const cardOfCountry = countries.map(({name, flags, capital, languages, population }) => {
       return `
       <div class="current-country"
@@ -67,7 +69,7 @@ function clearMarkupConteiner() {
 }
 
 function clearCardOfCountry() {
-  cardOfCountry.innerHTML = '';
+  countryInfo.innerHTML = '';
 }
 
 
